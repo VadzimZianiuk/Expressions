@@ -17,7 +17,7 @@ namespace ExpressionTrees.Task2.ExpressionMapping
             Rules.Add(new Rule
             {
                 SourceParamName = (sourceProperty.Body as MemberExpression)?.Member.Name,
-                MemberInfo = (destinationProperty.Body as MemberExpression).Member,
+                Destination = (destinationProperty.Body as MemberExpression).Member,
                 MappingExpression = mappingExpression
             });
 
@@ -29,6 +29,6 @@ namespace ExpressionTrees.Task2.ExpressionMapping
     {
         public string SourceParamName { get; set; }
         public LambdaExpression MappingExpression { get; set; }
-        public MemberInfo MemberInfo { get; set; }
+        public MemberInfo Destination { get; set; }
     }
 }

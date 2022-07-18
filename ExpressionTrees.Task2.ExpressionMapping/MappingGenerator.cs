@@ -24,7 +24,7 @@ namespace ExpressionTrees.Task2.ExpressionMapping
                     value = Expression.Invoke(rule.MappingExpression, field);
                 }
 
-                var bindExpression = Expression.Bind(rule.MemberInfo, value);
+                var bindExpression = Expression.Bind(rule.Destination, value);
                 bindings.Add(bindExpression);
             }
 
